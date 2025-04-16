@@ -1,0 +1,17 @@
+{
+    "name": "spideycare",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "worker",
+      "frontend"
+    ],
+    "scripts": {
+      "dev:worker": "cd worker && npm run dev",
+      "dev:frontend": "cd frontend && npm run dev",
+      "build": "npm run build --workspaces",
+      "deploy": "npm run deploy:worker && npm run deploy:frontend",
+      "deploy:worker": "cd worker && npm run deploy",
+      "deploy:frontend": "cd frontend && npm run deploy"
+    }
+  }
